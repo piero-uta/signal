@@ -1,6 +1,13 @@
 const PeerServer = require('peer').PeerServer;
+
+const port = process.env.PORT || 3000;
+
+//log port 
+console.log('iniciado en puerto: ' +port);
+
+
 const server = PeerServer({
-  port: 3000,
+  port: port,
   path: '/myapp',
   allow_discovery: true,
   key: 'peerjs', // Agregamos esta línea
